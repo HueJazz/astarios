@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-w-custom {
+    max-width: 1360px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.custom-md-width {
+    width: 6rem;
+}
+
+.custom-px {
+    padding: 0 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .custom-md-width {
+        width: 12rem;
+    }
+    .custom-px {
+        padding: 0 3.5rem;
+    }
+  }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.2s linear;
+}
+
+.shadow-custom {
+    box-shadow: 0px 0px 18px #38bdf8;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+.referencesSwiper > .swiper-button-next {
+    color: white !important;
+    margin-right: 6rem;
+}
+
+.referencesSwiper > .swiper-button-prev {
+    color: white !important;
+    margin-left: 6rem;
+}
+
+.reviewsSwiper > .swiper-button-next {
+    color:#38bdf8 !important;
+    transform: scale(0.8);
+    margin-right: 2rem;
+}
+
+.reviewsSwiper > .swiper-button-prev {
+    color:#38bdf8 !important;
+    transform: scale(0.8);
+    margin-left: 2rem;
 }
